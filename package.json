@@ -1,0 +1,19 @@
+{
+  "name": "kah-fcc-timestamp",
+  "version": "1.0.0",
+  "description": "Timestamp Microservice for FreeCodeCamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "freecodecamp",
+    "nodejs"
+  ],
+  "author": "Kieran Harding",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
