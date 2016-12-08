@@ -20,6 +20,19 @@ function get_natural (stamp) {
   } 
 }
 
+const server = http.createServer((req, res) => {
+  const path = url.parse(req.url, true).pathname.slice(1)
+  const result = {
+    'unix': get_unix(path),
+    'natural': get_natural(path)
+  }
+
+  res.writeHead(200, {'Content-Type': 'application/json'})
+  res.end(JSON.stringify(result))
+})
+
+server.listen(process.env.PORT || 5000)
+
 module.exports = {
   get_unix: get_unix,
   get_natural: get_natural
