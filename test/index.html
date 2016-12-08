@@ -1,0 +1,27 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>My FCC Timestamp Microservice</title>
+  </head>
+  <body>
+    <h2>Timestamp Microservice</h2>
+    <h3>What can I do?</h3>
+    <ol class="userstory">
+      <li>I can pass a string as a parameter, and it will check 
+        to see whether that string contains either a unix 
+        timestamp or a natural language date (example: January 1, 2016)
+      <li>If it does, it returns both the Unix timestamp and the 
+        natural language form of that date.
+      <li>If it does not contain a date or Unix timestamp, 
+        it returns null for those properties.
+    </ol>
+    <h3>How?</h3>
+    <p>Just append your timestamp to the address, like so:</p>
+      <ul class="usage">
+        <li> https://kah-fcc-timestamp.herokuapp.com/1234567890
+        <li> https://kah-fcc-timestamp.herokuapp.com/December%2015,%202015
+      </ul>
+    <h3>Why?</h3>
+    <a href="https://www.freecodecamp.com">Because I can, mostly.</a>
+  </body>
+</html>
