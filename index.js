@@ -9,9 +9,15 @@ function get_unix (stamp) {
   return 1 * stamp || Date.parse(stamp.replace(new RegExp('%20', 'g'), ' ')) / 1000 || null
 }
 
-function get_natural (num) {
-  // If not a parsable date, return null
-  // Otherwise, format and return
+function get_natural (stamp) {
+  const date = 1000 * stamp
+    ? new Date(1000 * stamp)
+    : new Date(stamp.replace(new RegExp('%20', 'g'), ' '))
+  if (date.toString() === 'Invalid Date') {
+    return null
+  } else {
+    return strftime('%B %d, %Y', date)
+  } 
 }
 
 module.exports = {

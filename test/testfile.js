@@ -8,10 +8,10 @@ describe('timestamp', function () {
       get_natural('1450159200').should.equal('December 15, 2015')
     })
     it('should return null given any non-date text', function () {
-      get_natural('orange').should.be.null
+      should.equal(get_natural('orange'), null)
     })
     it.skip('should return null given an almost date', function () {
-      get_natural('Decdember%2015,%202015').should.be.null
+      should.equal(get_natural('Decdember%2015,%202015'), null)
     }) // Apparently node will parse this. I accept.
     it('should return its clean input given a natural date', function () {
       get_natural('December%2015,%202015').should.equal('December 15, 2015')
